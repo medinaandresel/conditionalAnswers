@@ -1,0 +1,969 @@
+
+SELECT   ?cinema ?station
+WHERE
+  { ?cinema    rdf:type             tuwt:Cinema ;
+              tuwt:isLocatedNext   ?station .
+    ?station  rdf:type             tuwt:SubwayStation ;
+              tuwt:isLocatedAlong  ?line .
+    ?line 	  rdf:type 			   tuwt:SubwayRoute .
+    tuwt:1010572279
+              tuwt:isLocatedAlong  ?line .
+  }
+
+
+
+50000
+log4j:WARN No appenders could be found for logger (org.apache.jena.riot.stream.JenaIOEnvironment).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Local Data size: 227634
+----------TEST FED QUERY
+Returned answers: 3
+Time to execute FedQuery(ms): 42754
+----------END TEST FED QUERY 
+
+---------- TEST QUERY TBox REWRITING
+?cinema
+?station
+TBox rewriting size: 12
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema, role=null, terms={?cinema=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?cinema=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation, role=null, terms={http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279=null}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayRoute, role=null, terms={?line=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong, terms={http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279=?line}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema, role=null, terms={?cinema=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?cinema=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation, role=null, terms={http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279=null}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U3, role=null, terms={?line=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong, terms={http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279=?line}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema, role=null, terms={?cinema=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?cinema=?station}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation, role=null, terms={?station=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong, terms={?station=?line}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U3, role=null, terms={?line=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong, terms={http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279=?line}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema, role=null, terms={?cinema=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?cinema=?station}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation, role=null, terms={?station=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong, terms={?station=?line}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U4, role=null, terms={?line=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong, terms={http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279=?line}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema, role=null, terms={?cinema=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?cinema=?station}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation, role=null, terms={?station=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong, terms={?station=?line}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U1, role=null, terms={?line=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong, terms={http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279=?line}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema, role=null, terms={?cinema=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?cinema=?station}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation, role=null, terms={?station=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong, terms={?station=?line}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayRoute, role=null, terms={?line=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong, terms={http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279=?line}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema, role=null, terms={?cinema=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?cinema=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation, role=null, terms={http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279=null}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U2, role=null, terms={?line=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong, terms={http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279=?line}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema, role=null, terms={?cinema=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?cinema=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation, role=null, terms={http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279=null}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U4, role=null, terms={?line=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong, terms={http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279=?line}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema, role=null, terms={?cinema=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?cinema=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation, role=null, terms={http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279=null}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U1, role=null, terms={?line=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong, terms={http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279=?line}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema, role=null, terms={?cinema=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?cinema=?station}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation, role=null, terms={?station=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong, terms={?station=?line}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U2, role=null, terms={?line=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong, terms={http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279=?line}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema, role=null, terms={?cinema=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?cinema=?station}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation, role=null, terms={?station=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong, terms={?station=?line}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U6, role=null, terms={?line=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong, terms={http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279=?line}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema, role=null, terms={?cinema=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?cinema=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation, role=null, terms={http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279=null}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U6, role=null, terms={?line=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong, terms={http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279=?line}]]]
+---------- Estimated time to obtain certain answers (ms): 513048
+---------- END TEST TBox REWRITING 
+
+---------- TEST ASSUMTIVE REWRITING
+?cinema
+?station
+?line
+FULL REW SIZE (incl. TBox rewr) 54
+[?cinema, ?station]
+SELECT  ?cinema ?station
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U1> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema ?station
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U1> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+    FILTER ( ( ?cinema = ?cinema ) && ( ?station = ?station ) )
+  }
+
+[?cinema, ?station]
+SELECT  ?cinema ?station
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U3> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema ?station
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U3> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+    FILTER ( ( ?cinema = ?cinema ) && ( ?station = ?station ) )
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U1>}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U1>
+    FILTER ( ?line = ?line )
+  }
+
+[?cinema, ?station]
+SELECT  ?cinema ?station
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U2> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema ?station
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U2> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U2>}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U2>
+    FILTER ( ( ( ?cinema = ?cinema ) && ( ?station = ?station ) ) && ( ?line = ?line ) )
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayRoute>}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayRoute>
+    FILTER ( ( ( ?cinema = ?cinema ) && ( ?station = ?station ) ) && ( ?line = ?line ) )
+  }
+
+[?cinema, ?station]
+SELECT  ?cinema ?station
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayRoute> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema ?station
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayRoute> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+    FILTER ( ( ?cinema = ?cinema ) && ( ?station = ?station ) )
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U2> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U2> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+    FILTER ( ( ?station = ?station ) && ( ?line = ?line ) )
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayRoute>}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayRoute>
+    FILTER ( ?line = ?line )
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U1> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U1> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+    FILTER ( ( ( ?cinema = ?cinema ) && ( ?station = ?station ) ) && ( ?line = ?line ) )
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayRoute> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayRoute> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+    FILTER ( ( ?station = ?station ) && ( ?line = ?line ) )
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U2>}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U2>
+    FILTER ( ( ( ?cinema = ?cinema ) && ( ?station = ?station ) ) && ( ?line = ?line ) )
+  }
+
+[?cinema]
+SELECT  ?cinema
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U6> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U6> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayRoute>}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayRoute>
+    FILTER ( ( ( ?cinema = ?cinema ) && ( ?station = ?station ) ) && ( ?line = ?line ) )
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U3>}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U3>
+    FILTER ( ( ( ?cinema = ?cinema ) && ( ?station = ?station ) ) && ( ?line = ?line ) )
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U4>}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U4>
+    FILTER ( ( ?station = ?station ) && ( ?line = ?line ) )
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U6>}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U6>
+    FILTER ( ( ?station = ?station ) && ( ?line = ?line ) )
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U4> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U4> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+    FILTER ( ( ( ?cinema = ?cinema ) && ( ?station = ?station ) ) && ( ?line = ?line ) )
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U4>}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U4>
+    FILTER ( ( ( ?cinema = ?cinema ) && ( ?station = ?station ) ) && ( ?line = ?line ) )
+  }
+
+[?cinema, ?station]
+SELECT  ?cinema ?station
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U1> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema ?station
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U1> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U2>}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U2>
+    FILTER ( ( ?station = ?station ) && ( ?line = ?line ) )
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U4> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U4> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+    FILTER ( ( ?station = ?station ) && ( ?line = ?line ) )
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U4>}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U4>
+    FILTER ( ?line = ?line )
+  }
+
+[?cinema, ?station]
+SELECT  ?cinema ?station
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U4> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema ?station
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U4> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U6> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U6> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+    FILTER ( ( ?station = ?station ) && ( ?line = ?line ) )
+  }
+
+[?cinema]
+SELECT  ?cinema
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U2> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U2> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U6>}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U6>
+    FILTER ( ( ( ?cinema = ?cinema ) && ( ?station = ?station ) ) && ( ?line = ?line ) )
+  }
+
+[?cinema]
+SELECT  ?cinema
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayRoute> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayRoute> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U3>}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U3>
+    FILTER ( ?line = ?line )
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U3> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U3> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+    FILTER ( ( ( ?cinema = ?cinema ) && ( ?station = ?station ) ) && ( ?line = ?line ) )
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U6> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U6> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+    FILTER ( ( ( ?cinema = ?cinema ) && ( ?station = ?station ) ) && ( ?line = ?line ) )
+  }
+
+[?cinema, ?station]
+SELECT  ?cinema ?station
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U2> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema ?station
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U2> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+    FILTER ( ( ?cinema = ?cinema ) && ( ?station = ?station ) )
+  }
+
+[?cinema]
+SELECT  ?cinema
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U4> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U4> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U6>}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U6>
+    FILTER ( ?line = ?line )
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayRoute> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayRoute> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+    FILTER ( ( ( ?cinema = ?cinema ) && ( ?station = ?station ) ) && ( ?line = ?line ) )
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U1>}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U1>
+    FILTER ( ( ( ?cinema = ?cinema ) && ( ?station = ?station ) ) && ( ?line = ?line ) )
+  }
+
+[?cinema, ?station]
+SELECT  ?cinema ?station
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U3> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema ?station
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U3> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U1>}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U1>
+    FILTER ( ( ( ?cinema = ?cinema ) && ( ?station = ?station ) ) && ( ?line = ?line ) )
+  }
+
+[?cinema, ?station]
+SELECT  ?cinema ?station
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayRoute> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema ?station
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayRoute> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U1> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U1> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+    FILTER ( ( ?station = ?station ) && ( ?line = ?line ) )
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayRoute>}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayRoute>
+    FILTER ( ( ?station = ?station ) && ( ?line = ?line ) )
+  }
+
+[?cinema]
+SELECT  ?cinema
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U1> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U1> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U3>}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U3>
+    FILTER ( ( ?station = ?station ) && ( ?line = ?line ) )
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U4>}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U4>
+    FILTER ( ( ( ?cinema = ?cinema ) && ( ?station = ?station ) ) && ( ?line = ?line ) )
+  }
+
+[?cinema]
+SELECT  ?cinema
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U3> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U3> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U3> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U3> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+    FILTER ( ( ?station = ?station ) && ( ?line = ?line ) )
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U1>}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U1>
+    FILTER ( ( ?station = ?station ) && ( ?line = ?line ) )
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U3>}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U3>
+    FILTER ( ( ( ?cinema = ?cinema ) && ( ?station = ?station ) ) && ( ?line = ?line ) )
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U2>}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U2>
+    FILTER ( ?line = ?line )
+  }
+
+[?cinema, ?station]
+SELECT  ?cinema ?station
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U6> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema ?station
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?cinema <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?station .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U6> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+  }
+
+[?cinema, ?station]
+SELECT  ?cinema ?station
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U6> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema ?station
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U6> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+    FILTER ( ( ?cinema = ?cinema ) && ( ?station = ?station ) )
+  }
+
+[?cinema, ?station]
+SELECT  ?cinema ?station
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U4> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema ?station
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?station <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U4> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+    FILTER ( ( ?cinema = ?cinema ) && ( ?station = ?station ) )
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U2> . 
+<http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U2> .
+    <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#1010572279> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedAlong> ?line
+    FILTER ( ( ( ?cinema = ?cinema ) && ( ?station = ?station ) ) && ( ?line = ?line ) )
+  }
+
+[?cinema, ?station, ?line]
+SELECT  ?cinema ?station ?line
+ WHERE { 
+?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> . 
+?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U6>}
+SELECT  ?cinema ?station ?line
+WHERE
+  { ?cinema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?station <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#SubwayStation> .
+    ?line <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#U6>
+    FILTER ( ( ( ?cinema = ?cinema ) && ( ?station = ?station ) ) && ( ?line = ?line ) )
+  }
+
+Time to eval all rewr (ms): 662
+Time to compute min cond ans (ms):1190
+Size of ask queries 14415
+Size of select queries 1
+Time to test all min. ground assumptions (ms): 40467
+Number of true assumtions 3
+Number of false assumtions 14413
+Size of min cond ans 14414
+---------- END TEST ASSUMTIVE REWRITING

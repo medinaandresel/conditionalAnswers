@@ -1,0 +1,6 @@
+SELECT  ?x ?y ?z ?u
+WHERE
+  { ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> ?y .
+    ?z <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#ResidentialRoute>
+    FILTER ( ( ( ?x = ?x ) && ( ?z = ?z ) ) && ( ?u = ?u ) )
+  }

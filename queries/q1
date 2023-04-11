@@ -1,0 +1,23 @@
+PREFIX  owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX  fn:   <http://www.w3.org/2005/xpath-functions#>
+PREFIX  tuwt: <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#>
+PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX  geo:  <http://www.georss.org/georssl/>
+PREFIX  tuwti: <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#>
+PREFIX  rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX  apf:  <http://jena.hpl.hp.com/ARQ/property#>
+PREFIX  xml:  <http://www.w3.org/XML/1998/namespace>
+PREFIX  dcterms: <http://purl.org/dc/terms/>
+PREFIX  dc:   <http://purl.org/dc/elements/1.1/>
+
+SELECT   ?cinema ?station
+WHERE
+  { ?cinema    rdf:type             tuwt:Cinema ;
+              tuwt:isLocatedNext   ?station .
+    ?station  rdf:type             tuwt:SubwayStation ;
+              tuwt:isLocatedAlong  ?line .
+    ?line 	  rdf:type 			   tuwt:SubwayRoute .
+    tuwt:1010572279
+              tuwt:isLocatedAlong  ?line .
+  }

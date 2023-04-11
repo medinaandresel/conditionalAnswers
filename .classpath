@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="lib" path="hdt-java-package-1.1.1-SNAPSHOT/lib/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="hdt-java-package-1.1.1-SNAPSHOT/lib/commons-compress-1.6.jar"/>
+	<classpathentry kind="lib" path="hdt-java-package-1.1.1-SNAPSHOT/lib/hamcrest-core-1.1.jar"/>
+	<classpathentry kind="lib" path="hdt-java-package-1.1.1-SNAPSHOT/lib/hdt-api-1.1.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="hdt-java-package-1.1.1-SNAPSHOT/lib/hdt-java-cli-1.1.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="hdt-java-package-1.1.1-SNAPSHOT/lib/hdt-java-core-1.1.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="hdt-java-package-1.1.1-SNAPSHOT/lib/hdt-jena-1.1.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="hdt-java-package-1.1.1-SNAPSHOT/lib/httpclient-4.2.3.jar"/>
+	<classpathentry kind="lib" path="hdt-java-package-1.1.1-SNAPSHOT/lib/httpcore-4.2.2.jar"/>
+	<classpathentry kind="lib" path="hdt-java-package-1.1.1-SNAPSHOT/lib/jcl-over-slf4j-1.6.4.jar"/>
+	<classpathentry kind="lib" path="hdt-java-package-1.1.1-SNAPSHOT/lib/jcommander-1.32.jar"/>
+	<classpathentry kind="lib" path="hdt-java-package-1.1.1-SNAPSHOT/lib/jena-arq-2.11.0.jar"/>
+	<classpathentry kind="lib" path="hdt-java-package-1.1.1-SNAPSHOT/lib/jena-core-2.11.0.jar"/>
+	<classpathentry kind="lib" path="hdt-java-package-1.1.1-SNAPSHOT/lib/jena-iri-1.0.0.jar"/>
+	<classpathentry kind="lib" path="hdt-java-package-1.1.1-SNAPSHOT/lib/junit-dep-4.8.2.jar"/>
+	<classpathentry kind="lib" path="hdt-java-package-1.1.1-SNAPSHOT/lib/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="hdt-java-package-1.1.1-SNAPSHOT/lib/slf4j-api-1.6.4.jar"/>
+	<classpathentry kind="lib" path="hdt-java-package-1.1.1-SNAPSHOT/lib/slf4j-log4j12-1.6.4.jar"/>
+	<classpathentry kind="lib" path="hdt-java-package-1.1.1-SNAPSHOT/lib/xercesImpl-2.11.0.jar"/>
+	<classpathentry kind="lib" path="hdt-java-package-1.1.1-SNAPSHOT/lib/xml-apis-1.4.01.jar"/>
+	<classpathentry kind="lib" path="hdt-java-package-1.1.1-SNAPSHOT/lib/xz-1.4.jar"/>
+	<classpathentry kind="lib" path="/pellet-jena/target/pellet-jena-2.4.0-SNAPSHOT-jar-with-dependencies.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

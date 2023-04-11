@@ -1,0 +1,130 @@
+SELECT   ?x ?y 
+WHERE
+  { ?x    rdf:type             tuwt:Supermarket ;
+  		 tuwt:hasSupermarketOperator tuwti:Billa .
+   ?y  rdf:type             tuwt:Cinema .
+         ?x  tuwt:isLocatedNext   ?y  
+    
+  }
+
+
+240000
+log4j:WARN No appenders could be found for logger (org.apache.jena.riot.stream.JenaIOEnvironment).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Local Data size: 227634
+----------TEST FED QUERY
+Returned answers: 13
+Time to execute FedQuery(ms): 32220
+----------END TEST FED QUERY 
+
+---------- TEST QUERY TBox REWRITING
+?x
+?y
+TBox rewriting size: 3
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasSupermarketOperator, terms={?x=_}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasSupermarketOperator, terms={?x=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#Billa}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema, role=null, terms={?y=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?x=?y}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#BioSupermarket, role=null, terms={?x=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasSupermarketOperator, terms={?x=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#Billa}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema, role=null, terms={?y=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?x=?y}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Supermarket, role=null, terms={?x=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasSupermarketOperator, terms={?x=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#Billa}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema, role=null, terms={?y=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?x=?y}]]]
+---------- Estimated time to obtain certain answers (ms): 96660
+---------- END TEST TBox REWRITING 
+
+---------- TEST ASSUMTIVE REWRITING
+?x
+?y
+FULL REW SIZE (incl. TBox rewr) 6
+[?x, ?y]
+SELECT  ?x ?y
+ WHERE { 
+?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasSupermarketOperator> ?anon0 . 
+?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasSupermarketOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#Billa> . 
+?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?y}
+SELECT  ?x ?y
+WHERE
+  { ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasSupermarketOperator> ?anon0 .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasSupermarketOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#Billa> .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?y
+  }
+
+[?x, ?y]
+SELECT  ?x ?y
+ WHERE { 
+?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#BioSupermarket> . 
+?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasSupermarketOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#Billa> . 
+?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema>}
+SELECT  ?x ?y
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#BioSupermarket> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasSupermarketOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#Billa> .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema>
+    FILTER ( ( ?x = ?x ) && ( ?y = ?y ) )
+  }
+
+[?x, ?y]
+SELECT  ?x ?y
+ WHERE { 
+?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#BioSupermarket> . 
+?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasSupermarketOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#Billa> . 
+?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?y}
+SELECT  ?x ?y
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#BioSupermarket> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasSupermarketOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#Billa> .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?y
+  }
+
+[?x, ?y]
+SELECT  ?x ?y
+ WHERE { 
+?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Supermarket> . 
+?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasSupermarketOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#Billa> . 
+?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> . 
+?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?y}
+SELECT  ?x ?y
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Supermarket> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasSupermarketOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#Billa> .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?y
+  }
+
+[?x, ?y]
+SELECT  ?x ?y
+ WHERE { 
+?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasSupermarketOperator> ?anon0 . 
+?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasSupermarketOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#Billa> . 
+?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema>}
+SELECT  ?x ?y
+WHERE
+  { ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasSupermarketOperator> ?anon0 .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasSupermarketOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#Billa> .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema>
+    FILTER ( ( ?x = ?x ) && ( ?y = ?y ) )
+  }
+
+[?x, ?y]
+SELECT  ?x ?y
+ WHERE { 
+?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Supermarket> . 
+?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasSupermarketOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#Billa> . 
+?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema>}
+SELECT  ?x ?y
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Supermarket> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasSupermarketOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#Billa> .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Cinema>
+    FILTER ( ( ?x = ?x ) && ( ?y = ?y ) )
+  }
+
+Time to eval all rewr (ms): 87
+Time to compute min cond ans (ms):252
+Size of ask queries 8742
+Size of select queries 1
+Time to test all min. ground assumptions (ms): 22050
+Number of true assumtions 13
+Number of false assumtions 8730
+Size of min cond ans 8741
+---------- END TEST ASSUMTIVE REWRITING

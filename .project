@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>CondAnswersExperiments</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.m2e.core.maven2Builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.m2e.core.maven2Nature</nature>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>hdt-java-package-1.1.1-SNAPSHOT</name>
+			<type>2</type>
+			<location>/Users/medinaandresel/Documents/WORKSPACE/hdt-java/hdt-java-package/target/hdt-java-package-1.1.1-SNAPSHOT-distribution/hdt-java-package-1.1.1-SNAPSHOT</location>
+		</link>
+	</linkedResources>
+</projectDescription>

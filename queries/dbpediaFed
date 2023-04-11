@@ -1,0 +1,10 @@
+SELECT ?x
+WHERE 
+{
+	SERVICE <http://localhost:8080/fuseki/testDBpedia/sparql> {
+	?y <http://www.w3.org/2005/sparql-results#value> ?x }
+	
+	SERVICE <https://dbpedia.org/sparql> {
+		?x a <http://dbpedia.org/ontology/MusicalArtist>
+	}
+}LIMIT 20

@@ -1,0 +1,20 @@
+PREFIX tuwt: <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#>
+PREFIX tuwti: <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX gml: <http://www.opengis.net/gml/>
+PREFIX geo: <http://www.georss.org/georssl/>
+PREFIX : <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#>
+
+SELECT  DISTINCT ?x ?y 
+WHERE
+  {  ?x a tuwt:Florist .
+     ?y a tuwt:Bank ;
+        tuwt:hasBankOperator tuwti:BankSmallOp
+     
+     
+     SERVICE <http://localhost:8080/fuseki/GeoData/sparql> {
+      ?x tuwt:isLocatedNext ?u .
+      ?u tuwt:connected ?w .
+      ?y tuwt:isLocatedNext ?w 
+  }
+ }

@@ -1,0 +1,712 @@
+
+SELECT  ?x ?y
+WHERE { 
+     ?x a tuwt:Florist .
+     ?x tuwt:isLocatedNext ?u .
+     ?u tuwt:connected ?w .
+     ?y tuwt:isLocatedNext ?w .
+     ?y a tuwt:Bank ;
+       tuwt:hasBankOperator tuwti:BankSmallOp
+}
+
+
+240000
+log4j:WARN No appenders could be found for logger (org.apache.jena.riot.stream.JenaIOEnvironment).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Local Data size: 227634
+----------TEST FED QUERY
+Returned answers: 5
+Time to execute FedQuery(ms): 163936
+----------END TEST FED QUERY 
+
+---------- TEST QUERY TBox REWRITING
+?x
+?y
+!!!! removed atom QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?y=?w}]
+replace ?y by ?x:ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist, role=null, terms={?x=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?x=?u}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected, terms={?u=?w}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank, role=null, terms={?x=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?x=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp}]]]
+!!!! removed atom QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?y=?w}]
+replace ?w by ?u:ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist, role=null, terms={?x=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?x=?u}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected, terms={?u=?u}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank, role=null, terms={?y=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?y=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp}]]]
+!!!! removed atom QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?x=?u}]
+replace ?x by ?y:ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist, role=null, terms={?y=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected, terms={?u=?w}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?y=?w}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank, role=null, terms={?y=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?y=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp}]]]
+!!!! removed atom QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?x=?u}]
+replace ?u by ?w:ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist, role=null, terms={?x=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected, terms={?w=?w}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?y=?w}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank, role=null, terms={?y=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?y=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp}]]]
+!!!! removed atom QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?x=_}]
+replace _ by http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp:ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist, role=null, terms={?x=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?x=?u}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected, terms={?u=?w}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?x=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp}]]]
+!!!! removed atom QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?y=?w}]
+replace ?y by ?x:ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist, role=null, terms={?x=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?x=?u}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected, terms={?u=?w}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?x=_}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?x=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp}]]]
+!!!! removed atom QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?y=?w}]
+replace ?w by ?u:ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist, role=null, terms={?x=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?x=?u}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected, terms={?u=?u}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?y=_}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?y=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp}]]]
+!!!! removed atom QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?x=?u}]
+replace ?x by ?y:ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist, role=null, terms={?y=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected, terms={?u=?w}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?y=?w}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?y=_}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?y=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp}]]]
+!!!! removed atom QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?x=?u}]
+replace ?u by ?w:ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist, role=null, terms={?x=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected, terms={?w=?w}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?y=?w}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?y=_}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?y=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp}]]]
+!!!! removed atom QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?y=_}]
+replace _ by http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp:ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist, role=null, terms={?x=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?x=?u}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected, terms={?u=?w}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?y=?w}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?y=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp}]]]
+TBox rewriting size: 14
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist, role=null, terms={?x=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?x=?u}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected, terms={?u=?u}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?y=_}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?y=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist, role=null, terms={?x=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?x=?u}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected, terms={?u=?w}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?x=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist, role=null, terms={?x=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?x=?u}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected, terms={?u=?u}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank, role=null, terms={?y=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?y=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist, role=null, terms={?y=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected, terms={?u=?w}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?y=?w}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank, role=null, terms={?y=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?y=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist, role=null, terms={?y=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected, terms={?u=?w}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?y=?w}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?y=_}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?y=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist, role=null, terms={?x=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?x=?u}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected, terms={?u=?w}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?y=?w}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank, role=null, terms={?y=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?y=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist, role=null, terms={?x=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?x=?u}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected, terms={?u=?w}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?y=?w}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank, role=null, terms={?y=}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?y=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist, role=null, terms={?x=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?x=?u}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected, terms={?u=?w}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?y=?w}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?y=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist, role=null, terms={?x=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected, terms={?w=?w}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?y=?w}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?y=_}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?y=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist, role=null, terms={?x=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected, terms={?w=?w}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?y=?w}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank, role=null, terms={?y=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?y=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist, role=null, terms={?x=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?x=?u}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected, terms={?u=?w}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank, role=null, terms={?x=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?x=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist, role=null, terms={?x=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?x=?u}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected, terms={?u=?w}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?x=_}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?x=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist, role=null, terms={?x=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?x=?u}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected, terms={?u=?w}], QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank, role=null, terms={?x=}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?x=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp}]]]
+ConjunctiveQuery [atoms=[QueryAtom [isUnary=true, isBinary=false, concept=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist, role=null, terms={?x=null}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?x=?u}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected, terms={?u=?w}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext, terms={?y=?w}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?y=_}], QueryAtom [isUnary=false, isBinary=true, concept=null, role=http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator, terms={?y=http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp}]]]
+---------- Estimated time to obtain certain answers (ms): 2295104
+---------- END TEST TBox REWRITING 
+
+---------- TEST ASSUMTIVE REWRITING
+?x
+?u
+?y
+?w
+FULL REW SIZE (incl. TBox rewr) 64
+[?x, ?y, ?u, ?w]
+SELECT  ?x ?y ?u ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> ?anon0 .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ( ( ?u = ?u ) && ( ?w = ?w ) ) && ( ?x = ?x ) ) && ( ?y = ?y ) )
+  }
+
+[?x, ?y, ?w, ?u]
+SELECT  ?x ?y ?w ?u
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?w = ?w ) && ( ?x = ?x ) )
+  }
+
+[?x, ?y, ?w]
+SELECT  ?x ?y ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?w = ?w ) && ( ?y = ?y ) )
+  }
+
+[?x, ?y, ?u]
+SELECT  ?x ?y ?u
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?u = ?u ) && ( ?x = ?x ) )
+  }
+
+[?x, ?y, ?u, ?w]
+SELECT  ?x ?y ?u ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ( ( ?u = ?u ) && ( ?w = ?w ) ) && ( ?x = ?x ) ) && ( ?y = ?y ) )
+  }
+
+[?x, ?y, ?u]
+SELECT  ?x ?y ?u
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?u .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?u = ?u ) && ( ?x = ?x ) )
+  }
+
+[?y, ?y, ?u, ?w]
+SELECT  ?y ?u ?w
+WHERE
+  { ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> ?anon0 .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ?y = ?y )
+  }
+
+[?x, ?y, ?w]
+SELECT  ?x ?y ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> ?anon0 .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?w = ?w ) && ( ?y = ?y ) )
+  }
+
+[?y, ?y, ?w]
+SELECT  ?y ?w
+WHERE
+  { ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> ?anon0 .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?w = ?w ) && ( ?y = ?y ) )
+  }
+
+[?x, ?x, ?u]
+SELECT  ?x ?u
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?u = ?u ) && ( ?x = ?x ) )
+  }
+
+[?x, ?x, ?u, ?w]
+SELECT  ?x ?u ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> ?anon0 .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ?u = ?u )
+  }
+
+[?x, ?y, ?w, ?u]
+SELECT  ?x ?y ?w ?u
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?w .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?w = ?w ) && ( ?x = ?x ) )
+  }
+
+[?x, ?y, ?u, ?w]
+SELECT  ?x ?y ?u ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?u = ?u ) && ( ?y = ?y ) )
+  }
+
+[?x, ?y, ?w, ?u]
+SELECT  ?x ?y ?w ?u
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?w .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?w = ?w ) && ( ?x = ?x ) )
+  }
+
+[?x, ?y, ?u, ?w]
+SELECT  ?x ?y ?u ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?u = ?u ) && ( ?y = ?y ) )
+  }
+
+[?x, ?y]
+SELECT  ?x ?y
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+  }
+
+[?x, ?y]
+SELECT  ?x ?y
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?w <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> ?anon0 .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+  }
+
+[?x, ?y, ?u, ?w]
+SELECT  ?x ?y ?u ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> ?anon0 .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?u = ?u ) && ( ?y = ?y ) )
+  }
+
+[?x, ?x]
+SELECT  ?x
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+  }
+
+[?x, ?x]
+SELECT  ?x
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+  }
+
+[?y, ?y, ?u, ?w]
+SELECT  ?y ?u ?w
+WHERE
+  { ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ?y = ?y )
+  }
+
+[?y, ?y, ?w, ?u]
+SELECT  ?y ?w ?u
+WHERE
+  { ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> ?anon0 .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ?w = ?w )
+  }
+
+[?y, ?y, ?w]
+SELECT  ?y ?w
+WHERE
+  { ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?w = ?w ) && ( ?y = ?y ) )
+  }
+
+[?x, ?y, ?u]
+SELECT  ?x ?y ?u
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?w .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?u = ?u ) && ( ?x = ?x ) )
+  }
+
+[?x, ?y, ?u]
+SELECT  ?x ?y ?u
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?w .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?u = ?u ) && ( ?x = ?x ) )
+  }
+
+[?x, ?y, ?w]
+SELECT  ?x ?y ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?w <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> ?anon0 .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?w = ?w ) && ( ?y = ?y ) )
+  }
+
+[?x, ?x, ?u, ?w]
+SELECT  ?x ?u ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ?x = ?x )
+  }
+
+[?x, ?y, ?u, ?w]
+SELECT  ?x ?y ?u ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> ?anon0 .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?x = ?x ) && ( ?y = ?y ) )
+  }
+
+[?y, ?y, ?w, ?u]
+SELECT  ?y ?w ?u
+WHERE
+  { ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?w .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ?w = ?w )
+  }
+
+[?x, ?x, ?u, ?w]
+SELECT  ?x ?u ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> ?anon0 .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ?x = ?x )
+  }
+
+[?x, ?x]
+SELECT  ?x
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> ?anon0 .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+  }
+
+[?x, ?x, ?u]
+SELECT  ?x ?u
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> ?anon0 .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?u = ?u ) && ( ?x = ?x ) )
+  }
+
+[?x, ?y]
+SELECT  ?x ?y
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?u .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> ?anon0 .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+  }
+
+[?x, ?x]
+SELECT  ?x
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+  }
+
+[?x, ?y]
+SELECT  ?x ?y
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?u .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+  }
+
+[?x, ?y, ?w]
+SELECT  ?x ?y ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?w <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?w = ?w ) && ( ?y = ?y ) )
+  }
+
+[?x, ?y, ?u]
+SELECT  ?x ?y ?u
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> ?anon0 .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?u = ?u ) && ( ?x = ?x ) )
+  }
+
+[?y, ?y]
+SELECT  ?y
+WHERE
+  { ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?w .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+  }
+
+[?y, ?y]
+SELECT  ?y
+WHERE
+  { ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> ?anon0 .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+  }
+
+[?x, ?x, ?u, ?w]
+SELECT  ?x ?u ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ?x = ?x )
+  }
+
+[?x, ?x, ?u, ?w]
+SELECT  ?x ?u ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ?x = ?x )
+  }
+
+[?x, ?x, ?u, ?w]
+SELECT  ?x ?u ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ?u = ?u )
+  }
+
+[?x, ?x, ?u, ?w]
+SELECT  ?x ?u ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ?u = ?u )
+  }
+
+[?x, ?y, ?w, ?u]
+SELECT  ?x ?y ?w ?u
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> ?anon0 .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?w = ?w ) && ( ?x = ?x ) )
+  }
+
+[?x, ?y]
+SELECT  ?x ?y
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> ?anon0 .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+  }
+
+[?x, ?y, ?u, ?w]
+SELECT  ?x ?y ?u ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ( ( ?u = ?u ) && ( ?w = ?w ) ) && ( ?x = ?x ) ) && ( ?y = ?y ) )
+  }
+
+[?x, ?y, ?u, ?w]
+SELECT  ?x ?y ?u ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ( ( ?u = ?u ) && ( ?w = ?w ) ) && ( ?x = ?x ) ) && ( ?y = ?y ) )
+  }
+
+[?x, ?y, ?u, ?w]
+SELECT  ?x ?y ?u ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?w .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?u = ?u ) && ( ?w = ?w ) )
+  }
+
+[?x, ?y, ?u, ?w]
+SELECT  ?x ?y ?u ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?w .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?u = ?u ) && ( ?w = ?w ) )
+  }
+
+[?x, ?y, ?w]
+SELECT  ?x ?y ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?w = ?w ) && ( ?y = ?y ) )
+  }
+
+[?x, ?y, ?w]
+SELECT  ?x ?y ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?w = ?w ) && ( ?y = ?y ) )
+  }
+
+[?x, ?y, ?u, ?w]
+SELECT  ?x ?y ?u ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?x = ?x ) && ( ?y = ?y ) )
+  }
+
+[?x, ?y, ?u, ?w]
+SELECT  ?x ?y ?u ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?u = ?u ) && ( ?w = ?w ) )
+  }
+
+[?x, ?y, ?u, ?w]
+SELECT  ?x ?y ?u ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?u = ?u ) && ( ?y = ?y ) )
+  }
+
+[?x, ?y, ?u]
+SELECT  ?x ?y ?u
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?u .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> ?anon0 .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?u = ?u ) && ( ?x = ?x ) )
+  }
+
+[?x, ?y, ?u, ?w]
+SELECT  ?x ?y ?u ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?x = ?x ) && ( ?y = ?y ) )
+  }
+
+[?x, ?y, ?u, ?w]
+SELECT  ?x ?y ?u ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?x = ?x ) && ( ?y = ?y ) )
+  }
+
+[?x, ?y]
+SELECT  ?x ?y
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?w .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+  }
+
+[?x, ?y]
+SELECT  ?x ?y
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?w .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+  }
+
+[?x, ?x, ?u, ?w]
+SELECT  ?x ?u ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ?u = ?u )
+  }
+
+[?x, ?y]
+SELECT  ?x ?y
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?w <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?w .
+    ?y <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+  }
+
+[?x, ?y, ?u, ?w]
+SELECT  ?x ?y ?u ?w
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?u .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#isLocatedNext> ?w .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> ?anon0 .
+    ?y <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?u = ?u ) && ( ?w = ?w ) )
+  }
+
+[?x, ?x, ?u]
+SELECT  ?x ?u
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?u = ?u ) && ( ?x = ?x ) )
+  }
+
+[?x, ?x, ?u]
+SELECT  ?x ?u
+WHERE
+  { ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Florist> .
+    ?u <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#connected> ?w .
+    ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#Bank> .
+    ?x <http://www.kr.tuwien.ac.at/myits/geoconcepts/terms#hasBankOperator> <http://www.kr.tuwien.ac.at/myits/geoconcepts/items#BankSmallOp>
+    FILTER ( ( ?u = ?u ) && ( ?x = ?x ) )
+  }
+
+Time to eval all rewr (ms): 2131
+Time to compute min cond ans (ms):4614
+Size of ask queries 1
+Size of select queries 60501
+Time to test all min. ground assumptions (ms): 145912
+Number of true assumtions 5
+Number of false assumtions 60496
+Size of min cond ans 60500
+---------- END TEST ASSUMTIVE REWRITING
